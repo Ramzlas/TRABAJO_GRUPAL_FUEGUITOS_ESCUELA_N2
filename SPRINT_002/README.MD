@@ -1,42 +1,40 @@
-## Sprint N
+## Sprint N002
 
-**Semana:** [DD/MM] al [DD/MM]
-**Objetivo:** [completar]
+**Semana:** [12/10/2026] al [16/10/2026]
+**Objetivo:** [TERMINAR ESQUEMA BÁSICO DE PAGINA WEB ESTÁTICA]
 
 ### Tareas del sprint
 
-- [ ] [tarea] (RFx) [responsable]
-- [ ] [tarea] (RFx) [responsable]
+- [x] [Tener el INDEX.html] 
+- [ ] [Estandarizar la documentación] 
+- [ ] [Definir los roles y áreas de trabajo más optimas] 
 
-### Lunes [DD/MM] · Planificación + desarrollo
+### Lunes [12/10/2026]
 
-**Objetivo del día:** [completar]
+FERIADO
 
-| Integrante | Qué hizo | Qué va a hacer | Bloqueos |
-|---|---|---|---|
-| Espinillo Lautaro | | | |
-| Ochoa Santiago | | | |
-| Dimare Thomas | | | |
-| Caceres Joaquin | | | |
-| Coronel Thiago | | | |
-| Ortiz Juan | | | |
+### Miércoles [14/10/2026] 
 
-**Observaciones del día:**
-- [completar]
+- [x] [Tener el INDEX.html]
+- [x] [Repasar la documentación]
 
-**Decisiones tomadas:**
-- [completar]
+Integrantes del sprint:
 
-### Miércoles [DD/MM] · Desarrollo + seguimiento
-(misma estructura que el lunes)
+- Santiago Ochoa
+- Thomas Dimare
 
-### Viernes [DD/MM] · Desarrollo + cierre
-(misma estructura, con "Qué queda pendiente" en lugar de "Qué va a hacer")
+### Viernes [[16/10/2026]]
 
-### Cierre del sprint N
+- [] []
 
-**Review (qué se entregó):**
-- [completar]
+Integrantes del sprint:
+
+-
+-
+
+### Cierre del sprint N002
+
+**Review:**
 
 **Retrospectiva:**
 
@@ -44,5 +42,3 @@
 |---|---|---|
 | | | |
 
-**Tareas que pasan al próximo sprint:**
-- [completar]
