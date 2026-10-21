@@ -1,0 +1,474 @@
+/* Estilos del catálogo. Se carga DESPUÉS de style.css y reutiliza sus variables. */
+
+nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom: 1px solid var(--rust);
+  padding-bottom: 2px;
+}
+
+/* ---------- Encabezado de la página ---------- */
+.catalog-hero {
+  padding-block: 58px 34px;
+}
+
+.catalog-hero h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+.catalog-hero p.lead {
+  max-width: 520px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* ---------- Barra de herramientas ---------- */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-block: 1px solid var(--rule);
+  background: var(--cream);
+}
+
+.toolbar-inner {
+  display: grid;
+  gap: 16px;
+  padding-block: 18px;
+}
+
+.toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.search-box {
+  position: relative;
+  flex: 1 1 280px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 40px 12px 42px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.92rem;
+}
+
+.search-box input::placeholder {
+  color: var(--muted);
+}
+
+.search-box input:focus-visible,
+.sort-box select:focus-visible,
+.chip:focus-visible,
+.toggle input:focus-visible + .toggle-track,
+.book-card:focus-visible,
+.modal-close:focus-visible,
+.reset-btn:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--muted);
+  border-radius: 50%;
+  transform: translateY(-65%);
+  pointer-events: none;
+}
+
+.search-icon::after {
+  position: absolute;
+  right: -7px;
+  bottom: -6px;
+  width: 7px;
+  height: 2px;
+  background: var(--muted);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.search-clear {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  display: none;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.search-clear:hover {
+  color: var(--rust);
+}
+
+.search-box.has-value .search-clear {
+  display: block;
+}
+
+.sort-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.sort-box select {
+  padding: 11px 12px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.86rem;
+}
+
+/* Interruptor "Solo disponibles" */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 0.86rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle-track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  transition: background 150ms ease;
+}
+
+.toggle-track::after {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ink);
+  content: "";
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.toggle input:checked + .toggle-track {
+  background: var(--olive);
+  border-color: var(--olive);
+}
+
+.toggle input:checked + .toggle-track::after {
+  background: white;
+  transform: translateX(18px);
+}
+
+/* Chips de categoría */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 7px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.chip:hover {
+  border-color: var(--rust);
+  color: var(--rust);
+}
+
+.chip[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: white;
+}
+
+.chip small {
+  margin-left: 4px;
+  opacity: 0.65;
+  font-size: 0.72rem;
+}
+
+/* ---------- Resultados ---------- */
+.results {
+  padding-block: 34px 90px;
+}
+
+.results-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.results-head strong {
+  color: var(--ink);
+}
+
+.reset-btn {
+  padding: 0 0 3px;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.84rem;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  color: var(--rust);
+}
+
+.reset-btn[hidden] {
+  display: none;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 38px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.book-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.book-card .book-art {
+  min-height: 280px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.book-card:hover .book-art,
+.book-card:focus-visible .book-art {
+  box-shadow: inset 8px 0 rgba(0, 0, 0, 0.1), 8px 12px 18px rgba(43, 38, 28, 0.2);
+  transform: translateY(-4px);
+}
+
+.art-rust { background: #a94932; }
+.art-ink { background: #3a3a30; }
+.art-moss { background: #7a7d4f; }
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 14px 0 3px;
+}
+
+.card-meta .book-category {
+  margin: 0;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.status-ok { color: var(--olive); }
+.status-out { color: var(--muted); }
+.status-out::before { background: transparent; border: 1.5px solid currentColor; }
+
+.book-card.is-out .book-art {
+  filter: saturate(0.55);
+}
+
+/* Estado vacío */
+.empty {
+  padding: 70px 20px;
+  border: 1px dashed var(--rule);
+  background: var(--cream);
+  text-align: center;
+}
+
+.empty[hidden] {
+  display: none;
+}
+
+.empty h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.empty p {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+/* ---------- Ficha del libro (modal) ---------- */
+.book-modal {
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 0;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  overflow: auto;
+}
+
+.book-modal::backdrop {
+  background: rgba(41, 40, 32, 0.55);
+}
+
+.modal-body {
+  position: relative;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 34px;
+  padding: 36px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--rust);
+}
+
+.modal-body .book-art {
+  min-height: 330px;
+}
+
+.modal-info h2 {
+  margin-bottom: 6px;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  letter-spacing: -0.04em;
+}
+
+.modal-author {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.modal-desc {
+  margin-bottom: 22px;
+  font-size: 0.95rem;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 20px;
+  margin: 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+
+.facts dt {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.facts dd {
+  margin: 2px 0 0;
+  font-size: 0.92rem;
+}
+
+.modal-howto {
+  margin: 22px 0 0;
+  padding: 12px 14px;
+  background: var(--cream);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .catalog-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .catalog-hero { padding-block: 42px 26px; }
+  .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 16px; }
+  .toolbar { position: static; }
+  .modal-body { grid-template-columns: 1fr; padding: 26px 20px; gap: 22px; }
+  .modal-body .book-art { min-height: 220px; max-width: 220px; }
+}
+
+@media (max-width: 480px) {
+  .book-card .book-art { min-height: 220px; }
+  .card-meta { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .sort-box { width: 100%; }
+  .sort-box select { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-card:hover .book-art,
+  .book-card:focus-visible .book-art { transform: none; }
+}

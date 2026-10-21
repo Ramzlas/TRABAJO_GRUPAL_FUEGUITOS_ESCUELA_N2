@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicia sesión en Fueguitos para acceder a tu biblioteca.">
+  <title>Iniciar sesión | Fueguitos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-body">
+  <header class="site-header">
+    <div class="page-width nav-layout">
+      <a class="brand" href="index.html" aria-label="Fueguitos, inicio">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fueguitos</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="index.html#donar">Donar</a>
+        <a href="catalogo.html">Catálogo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-main">
+    <section class="login-panel" aria-labelledby="login-title">
+      <h1 id="login-title">Iniciar sesión</h1>
+
+      <form class="login-form" action="#" method="post" novalidate>
+        <div class="pill-field">
+          <span class="badge badge-left" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="3.6"/>
+              <path d="M4.8 20c.7-3.6 3.5-5.6 7.2-5.6s6.5 2 7.2 5.6"/>
+            </svg>
+          </span>
+          <label class="sr-only" for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="Correo electrónico" required>
+        </div>
+
+        <div class="pill-field">
+          <label class="sr-only" for="password">Contraseña</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Contraseña" required>
+          <button class="badge badge-right" type="button" aria-label="Mostrar contraseña" aria-pressed="false">
+            <svg class="icon-locked" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="11" width="14" height="9" rx="2"/>
+              <path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/>
+            </svg>
+            <svg class="icon-unlocked" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="11" width="14" height="9" rx="2"/>
+              <path d="M8.5 11V8a3.5 3.5 0 0 1 6.8-1.3"/>
+            </svg>
+          </button>
+        </div>
+
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+
+        <button class="login-submit" type="submit">Entrar</button>
+      </form>
+
+      <div class="login-links">
+        <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+        <a href="registro.html">Crear cuenta</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var input = document.getElementById('password');
+      var btn = document.querySelector('.badge-right');
+      btn.addEventListener('click', function () {
+        var show = input.type === 'password';
+        input.type = show ? 'text' : 'password';
+        btn.classList.toggle('is-visible', show);
+        btn.setAttribute('aria-pressed', String(show));
+        btn.setAttribute('aria-label', show ? 'Ocultar contraseña' : 'Mostrar contraseña');
+      });
+
+      var form = document.querySelector('.login-form');
+      var email = document.getElementById('email');
+      var error = document.getElementById('form-error');
+      form.addEventListener('submit', function (e) {
+        if (!email.value.trim() || !email.checkValidity() || !input.value) {
+          e.preventDefault();
+          error.textContent = 'Revisá tu correo y contraseña.';
+          error.hidden = false;
+        } else {
+          error.hidden = true;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

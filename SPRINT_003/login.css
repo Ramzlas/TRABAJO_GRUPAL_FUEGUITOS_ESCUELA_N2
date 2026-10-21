@@ -1,0 +1,195 @@
+/* Login minimalista. Usa las variables de style.css */
+
+.login-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.login-main {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  padding: 56px 24px 88px;
+}
+
+.login-panel {
+  width: min(100%, 380px);
+}
+
+.login-panel h1 {
+  margin-bottom: 40px;
+  font-size: clamp(2.2rem, 6vw, 2.8rem);
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  gap: 16px;
+}
+
+/* ---------- Campos en píldora ---------- */
+.pill-field {
+  position: relative;
+}
+
+.pill-field input {
+  width: 100%;
+  height: 54px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.95rem;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.pill-field:first-child input {
+  padding: 0 24px 0 74px;
+}
+
+.pill-field:nth-child(2) input {
+  padding: 0 74px 0 24px;
+}
+
+.pill-field input::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.pill-field input:hover {
+  border-color: var(--rule);
+}
+
+.pill-field input:focus-visible {
+  outline: none;
+  border-color: var(--rust);
+  background: var(--paper);
+}
+
+/* ---------- Círculos con ícono ---------- */
+.badge {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 50%;
+  background: var(--rust);
+  color: white;
+}
+
+.badge-left {
+  left: 0;
+  pointer-events: none;
+}
+
+.badge-right {
+  right: 0;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.badge-right:hover,
+.badge-right:focus-visible {
+  background: var(--ink);
+  outline: none;
+}
+
+.badge-right .icon-unlocked {
+  display: none;
+}
+
+.badge-right.is-visible .icon-locked {
+  display: none;
+}
+
+.badge-right.is-visible .icon-unlocked {
+  display: block;
+}
+
+/* ---------- Botón ---------- */
+.login-submit {
+  height: 54px;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: white;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.login-submit:hover,
+.login-submit:focus-visible {
+  background: var(--rust);
+  outline: none;
+}
+
+/* ---------- Mensajes y enlaces ---------- */
+.form-error {
+  margin: 0;
+  padding: 0 24px;
+  color: var(--rust);
+  font-size: 0.82rem;
+}
+
+.form-error[hidden] {
+  display: none;
+}
+
+.login-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.login-links a {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.login-links a:hover,
+.login-links a:focus-visible {
+  color: var(--rust);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Accesibilidad ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 480px) {
+  .login-main {
+    padding-block: 40px 64px;
+  }
+
+  .login-panel h1 {
+    margin-bottom: 32px;
+  }
+}
