@@ -1,96 +1,102 @@
-# 📚 Sistema de Gestión de Stock de Libros — 
+# 📚 Sistema de Gestión de Stock de Libros — [Nombre de la Fundación]
 
 Aplicación web para que la fundación controle el inventario de libros: altas, bajas, búsqueda y consulta de disponibilidad.
 
-## 🎯 Visión del producto
-
-Reemplazar el control manual del stock por una página simple, accesible y confiable, que permita saber en todo momento qué libros hay, cuántos y dónde.
-
-## 🛠️ Stack tecnológico
-
-- **Frontend:** HTML, CSS, JavaScript [agregar framework si aplica]
+## 🛠️ Stack
+- **Frontend:** HTML, CSS, JavaScript
 - **Backend:** [tecnología]
 - **Base de datos:** [tecnología]
 - **Control de versiones:** Git + GitHub
 
-## 👥 Equipo y roles
-
+## 👥 Equipo
 | Rol | Integrante(s) |
-|---|---|
-| Product Owner | [nombre] |
-| Scrum Master | [nombre] |
-| Grupo Código | [nombres] |
-| Grupo Metodología | [nombres] |
+| Product Owner | Fueguitos|
+| Scrum Master  | Coronel Thiago y Espinillo Lautaro |
+| Code Master   | Ochoa Santiago | 
+| Grupo Código  | Cáceres Joaquín y Dimare Thomas |
+| Líder Metodología | Ortiz Juan |
 
 ## 🔄 Metodología (Scrum)
+- **Sprint:** 1 semana, con 3 días de seguimiento
+- **Lunes:** planificación del sprint
+- **Miércoles:** control de avance
+- **Viernes:** review, retrospectiva y cierre
+- **Estados:** `Pendiente` → `En progreso` → `En revisión` → `Hecho`
 
-- **Duración del sprint:** 1 semana (lunes a viernes)
-- **Daily:** [horario / canal], 10 min máx.
-- **Review y Retrospectiva:** viernes, cierre del sprint
-- **Estados de tarea:** `Pendiente` → `En progreso` → `En revisión` → `Hecho`
-
-### ✅ Definition of Done
-Una tarea está terminada cuando:
+### ✅ Definición de Completado
 - [ ] Cumple lo descrito en la tarea
-- [ ] Fue revisada por otro integrante
-- [ ] Está subida al repositorio (rama integrada)
+- [ ] Revisada por otro integrante
+- [ ] Subida al repositorio
 - [ ] Se ve bien en escritorio y móvil
 
-## 📋 Product Backlog (resumen)
+## 📑 Índice de sprints
+ Sprint  02  “armado de plantillas html” [12/10/2026] al [16/10/2026]
+ Sprint 03 “Establecimiento de objetivos y delegación de tareas” - 19/10 al 23/10/2026-
+- Sprint N04 — 26/10 al 29/10 — Pendiente
 
-| Prioridad | Historia de usuario | Estado |
-|---|---|---|
-| Alta | Como encargado, quiero ver el listado de libros para conocer el stock | Pendiente |
-| Alta | Como encargado, quiero agregar/editar/eliminar libros | Pendiente |
-| Media | Como usuario, quiero buscar y filtrar por título, autor o categoría | Pendiente |
-| Media | Como encargado, quiero alertas de stock bajo | Pendiente |
-| Baja | Como administrador, quiero exportar el inventario | Pendiente |
+---
+---
+
+# 🏃 Sprint N003
+
+**Semana:** 19/10/2026 al 23/10/2026
+**Estado:** En curso
+
+## 🎯 Objetivos de la semana
+- [ ] Terminar el esquema estático (completar todos los templates `.html`)
+- [ ] [objetivo 2]
+- [ ] [objetivo 3]
+---
+
+## 📅 Lunes 19/10/2026 — Planificación
+
+**🎯 Objetivo del día:** [qué se busca lograr hoy]
+
+**Tareas:**
+- [x] Iniciar el archivo tipo Scrum
+- [x] Establecer los grupos de código y metodología
+- [ ] [tarea]
+
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
 
 ---
 
-## 🏃 Sprint N003
+## 📅 Miércoles 21/10/2026 — Control de avance
 
-**Semana:** 19/10/2026 al 23/10/2026
-**Objetivo:** Terminar el esquema estático del sitio (completar todos los templates `.html`).
+**🎯 Objetivo del día:** [ ]
 
-### Organización del trabajo
+**Tareas:**
+- [ ] [tarea]
+- [ ] [tarea]
+- [ ] [tarea]
 
-| Grupo | Responsabilidad | Tareas |
-|---|---|---|
-| Código | Desarrollo de los templates | [lista de templates asignados] |
-| Metodología | Documentación y seguimiento | [backlog, actas, tablero, revisión] |
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
 
-### Lunes 19/10/2026
-- [x] Iniciar el archivo tipo Scrum
-- [x] Establecer los grupos de código y metodología
-- [x] [tarea 3]
+---
 
-### Miércoles 21/10/2026
-- [x] [tarea 1]
-- [x] [tarea 2]
-- [x] [tarea 3]
+## 📅 Viernes 23/10/2026 — Review y cierre
 
-### Viernes 23/10/2026
-- [ ] [tarea 1]
-- [ ] [tarea 2]
-- [ ] [tarea 3]
+**🎯 Objetivo del día:** [ ]
 
-### 📊 Estado de los templates
+**Tareas:**
+- [ ] [tarea]
+- [ ] [tarea]
+- [ ] [tarea]
 
-| Template | Responsable | Estado |
-|---|---|---|
-| `index.html` | [nombre] | [ ] |
-| `libros.html` | [nombre] | [ ] |
-| `detalle-libro.html` | [nombre] | [ ] |
-| `formulario-libro.html` | [nombre] | [ ] |
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
 
-### 🏁 Cierre del sprint N003
+---
 
-**Resultado:** [objetivo cumplido / parcialmente / no cumplido]
+## 🏁 Cierre del Sprint N003
 
-| ¿Qué salió bien? | ¿Qué mejorar? | Acciones para el próximo sprint |
+**Resultado:** [cumplido / parcial / no cumplido]
+
+| ¿Qué salió bien? | ¿Qué mejorar? | Acciones próximo sprint |
 |---|---|---|
 | [ ] | [ ] | [ ] |
 
-**Pendientes que pasan al Sprint N004:**
-- [ ] [tarea]
+**Pasa al próximo sprint:**
+- [ ] [tarea pendiente]
