@@ -11,7 +11,7 @@
 <body>
   <header class="site-header">
     <div class="page-width nav-layout">
-      <a class="brand" href="index-publico.html" aria-label="Fueguitos, inicio">
+      <a class="brand" href="index.html" aria-label="Fueguitos, inicio">
         <span class="brand-mark" aria-hidden="true">F</span>
         <span>fueguitos</span>
       </a>
@@ -27,29 +27,28 @@
     <section class="catalog-hero page-width" aria-labelledby="catalog-title">
       <p class="kicker"><span></span> Biblioteca Fueguitos</p>
       <h1 id="catalog-title">Catálogo de <em>libros.</em></h1>
-      <p class="lead">Buscá por título o autor, elegí una categoría y tocá cualquier libro para ver su ficha. No hace falta registrarse.</p>
+      <p class="lead">Buscá por título o autor, elegí una categoría y explorá nuestros ejemplares. No hace falta registrarse.</p>
     </section>
 
     <!-- Barra de búsqueda y filtros -->
     <section class="toolbar" aria-label="Buscar y filtrar libros">
       <div class="page-width toolbar-inner">
         <div class="toolbar-row">
-          <div class="search-box" id="searchBox">
-            <label class="visually-hidden" for="search" style="position:absolute;left:-9999px">Buscar por título, autor o tema</label>
-            <span class="search-icon" aria-hidden="true"></span>
-            <input id="search" type="search" placeholder="Buscar por título, autor o tema…" autocomplete="off">
-            <button class="search-clear" id="searchClear" type="button" aria-label="Borrar búsqueda">×</button>
+          <div class="search-box">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="search" placeholder="Buscar por título, autor o tema…" autocomplete="off">
+            <button class="search-clear" type="button" aria-label="Borrar búsqueda">×</button>
           </div>
 
           <label class="toggle">
-            <input type="checkbox" id="onlyAvailable">
+            <input type="checkbox">
             <span class="toggle-track" aria-hidden="true"></span>
             Solo disponibles
           </label>
 
           <label class="sort-box">
             Ordenar
-            <select id="sort">
+            <select>
               <option value="title">Título (A–Z)</option>
               <option value="author">Autor (A–Z)</option>
               <option value="year-asc">Más antiguos primero</option>
@@ -58,51 +57,110 @@
           </label>
         </div>
 
-        <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+        <div class="chips" role="group" aria-label="Filtrar por categoría">
+          <button class="chip" type="button" aria-pressed="true">Todas <small>6</small></button>
+          <button class="chip" type="button" aria-pressed="false">Novela <small>3</small></button>
+          <button class="chip" type="button" aria-pressed="false">Poesía <small>1</small></button>
+          <button class="chip" type="button" aria-pressed="false">Infantil <small>1</small></button>
+          <button class="chip" type="button" aria-pressed="false">Ciencia <small>1</small></button>
+        </div>
       </div>
     </section>
 
-    <!-- Resultados -->
+    <!-- Resultados (6 libros distribuidos exactamente en 2 filas de 3) -->
     <section class="results page-width" aria-labelledby="results-title">
       <div class="results-head">
-        <p id="results-title" role="status" aria-live="polite"></p>
-        <button class="reset-btn" id="resetBtn" type="button" hidden>Limpiar filtros</button>
+        <p id="results-title" role="status">Mostrando <strong>6</strong> de 6 libros</p>
+        <button class="reset-btn" type="button" hidden>Limpiar filtros</button>
       </div>
 
-      <ul class="catalog-grid" id="grid"></ul>
+      <ul class="catalog-grid">
+        <!-- Fila 1 - Libro 1 -->
+        <li>
+          <article class="book-card">
+            <div class="book-cover-box">
+              <!-- <img src="imagen.jpg" alt="Don Quijote"> -->
+            </div>
+            <div class="card-meta">
+              <p class="book-category">Novela</p>
+              <span class="status status-ok">Disponible</span>
+            </div>
+            <h3>Don Quijote de la Mancha</h3>
+            <p class="book-byline">Miguel de Cervantes</p>
+          </article>
+        </li>
 
-      <div class="empty" id="empty" hidden>
-        <h2>No encontramos ese libro.</h2>
-        <p>Probá con otra palabra, revisá la ortografía o quitá algún filtro.</p>
-        <button class="primary-link" id="emptyReset" type="button" style="border:0;cursor:pointer;font:inherit;font-size:.9rem">Ver todo el catálogo</button>
-      </div>
+        <!-- Fila 1 - Libro 2 -->
+        <li>
+          <article class="book-card">
+            <div class="book-cover-box"></div>
+            <div class="card-meta">
+              <p class="book-category">Poesía</p>
+              <span class="status status-ok">Disponible</span>
+            </div>
+            <h3>Martín Fierro</h3>
+            <p class="book-byline">José Hernández</p>
+          </article>
+        </li>
+
+        <!-- Fila 1 - Libro 3 -->
+        <li>
+          <article class="book-card">
+            <div class="book-cover-box"></div>
+            <div class="card-meta">
+              <p class="book-category">Infantil</p>
+              <span class="status status-ok">Disponible</span>
+            </div>
+            <h3>Cuentos de la selva</h3>
+            <p class="book-byline">Horacio Quiroga</p>
+          </article>
+        </li>
+
+        <!-- Fila 2 - Libro 4 -->
+        <li>
+          <article class="book-card">
+            <div class="book-cover-box"></div>
+            <div class="card-meta">
+              <p class="book-category">Novela</p>
+              <span class="status status-out">Prestado</span>
+            </div>
+            <h3>Frankenstein</h3>
+            <p class="book-byline">Mary Shelley</p>
+          </article>
+        </li>
+
+        <!-- Fila 2 - Libro 5 -->
+        <li>
+          <article class="book-card">
+            <div class="book-cover-box"></div>
+            <div class="card-meta">
+              <p class="book-category">Ciencia</p>
+              <span class="status status-ok">Disponible</span>
+            </div>
+            <h3>El origen de las especies</h3>
+            <p class="book-byline">Charles Darwin</p>
+          </article>
+        </li>
+
+        <!-- Fila 2 - Libro 6 -->
+        <li>
+          <article class="book-card">
+            <div class="book-cover-box"></div>
+            <div class="card-meta">
+              <p class="book-category">Novela</p>
+              <span class="status status-out">Prestado</span>
+            </div>
+            <h3>Rayuela</h3>
+            <p class="book-byline">Julio Cortázar</p>
+          </article>
+        </li>
+      </ul>
     </section>
   </main>
 
-  <!-- Ficha del libro -->
-  <dialog class="book-modal" id="modal" aria-labelledby="m-title">
-    <div class="modal-body">
-      <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar ficha">×</button>
-      <div class="book-art" id="m-cover" aria-hidden="true"></div>
-      <div class="modal-info">
-        <p class="book-category" id="m-category"></p>
-        <h2 id="m-title"></h2>
-        <p class="modal-author" id="m-author"></p>
-        <p class="modal-desc" id="m-desc"></p>
-        <dl class="facts">
-          <div><dt>Estado</dt><dd id="m-status"></dd></div>
-          <div><dt>Código</dt><dd id="m-code"></dd></div>
-          <div><dt>Año</dt><dd id="m-year"></dd></div>
-          <div><dt>Páginas</dt><dd id="m-pages"></dd></div>
-        </dl>
-        <p class="modal-howto">Para pedirlo prestado, acercate a la biblioteca con el código del libro o <a href="login.html">iniciá sesión</a>.</p>
-      </div>
-    </div>
-  </dialog>
-
   <footer class="site-footer">
     <div class="page-width footer-layout">
-      <a class="brand footer-brand" href="index-publico.html">
+      <a class="brand footer-brand" href="index.html">
         <span class="brand-mark" aria-hidden="true">F</span>
         <span>fueguitos</span>
       </a>
@@ -110,185 +168,5 @@
       <a class="footer-catalog" href="index.html">Volver al inicio ↗</a>
     </div>
   </footer>
-
-  <script>
-    /* ============================================================
-       LIBROS DEL CATÁLOGO  (datos de ejemplo: reemplazalos por los reales)
-       color: olive | coral | blue | yellow | rust | ink | moss
-       available: true = disponible, false = prestado
-       ============================================================ */
-    const BOOKS = [
-      { id: 1,  title: "Don Quijote de la Mancha", author: "Miguel de Cervantes", category: "Novela",   year: 1605, pages: 863, code: "NOV-001", color: "yellow", available: true,
-        desc: "Un hidalgo que enloquece de tanto leer novelas de caballería sale por los caminos de España a enderezar entuertos, junto a su fiel escudero Sancho Panza." },
-      { id: 2,  title: "Martín Fierro", author: "José Hernández", category: "Poesía", year: 1872, pages: 320, code: "POE-001", color: "rust", available: true,
-        desc: "Poema narrativo que cuenta la vida de un gaucho perseguido por la injusticia, y se volvió una de las grandes obras de la literatura argentina." },
-      { id: 3,  title: "Cuentos de la selva", author: "Horacio Quiroga", category: "Infantil", year: 1918, pages: 120, code: "INF-001", color: "olive", available: true,
-        desc: "Historias de animales de la selva misionera: la tortuga gigante, los flamencos, el yacaré. Un clásico para leer en voz alta." },
-      { id: 4,  title: "Frankenstein", author: "Mary Shelley", category: "Novela", year: 1818, pages: 280, code: "NOV-002", color: "ink", available: false,
-        desc: "Un joven científico da vida a una criatura y debe enfrentar las consecuencias de su ambición. Una de las primeras novelas de ciencia ficción." },
-      { id: 5,  title: "El origen de las especies", author: "Charles Darwin", category: "Ciencia", year: 1859, pages: 502, code: "CIE-001", color: "moss", available: true,
-        desc: "La obra que explicó la evolución por selección natural y cambió para siempre la forma de entender la vida." },
-      { id: 6,  title: "Rayuela", author: "Julio Cortázar", category: "Novela", year: 1963, pages: 600, code: "NOV-003", color: "blue", available: false,
-        desc: "Una novela que se puede leer de corrido o saltando capítulos, como en el juego que le da nombre. Entre París y Buenos Aires." },
-      { id: 7,  title: "Veinte poemas de amor", author: "Pablo Neruda", category: "Poesía", year: 1924, pages: 96, code: "POE-002", color: "coral", available: true,
-        desc: "El libro de juventud de Neruda: versos de amor y soledad que lo hicieron famoso en toda Latinoamérica." },
-      { id: 8,  title: "El principito", author: "Antoine de Saint-Exupéry", category: "Infantil", year: 1943, pages: 96, code: "INF-002", color: "yellow", available: true,
-        desc: "Un piloto perdido en el desierto conoce a un pequeño príncipe que viaja de planeta en planeta. Un cuento para chicos y grandes." },
-      { id: 9,  title: "Ficciones", author: "Jorge Luis Borges", category: "Cuento", year: 1944, pages: 200, code: "CUE-001", color: "blue", available: true,
-        desc: "Laberintos, bibliotecas infinitas y espejos: cuentos que juegan con el tiempo, la realidad y los libros." },
-      { id: 10, title: "Historia de la Argentina", author: "Autores varios", category: "Historia", year: 2010, pages: 410, code: "HIS-001", color: "rust", available: true,
-        desc: "Un recorrido por los grandes momentos del país, escrito de forma clara para quien se acerca por primera vez a la historia argentina." },
-      { id: 11, title: "Alicia en el país de las maravillas", author: "Lewis Carroll", category: "Infantil", year: 1865, pages: 160, code: "INF-003", color: "coral", available: false,
-        desc: "Alicia sigue a un conejo blanco y cae en un mundo donde todo es al revés. Humor, juegos de palabras y personajes inolvidables." },
-      { id: 12, title: "Facundo", author: "Domingo F. Sarmiento", category: "Ensayo", year: 1845, pages: 310, code: "ENS-001", color: "ink", available: true,
-        desc: "Ensayo clave del siglo XIX que retrata la vida de un caudillo y discute el dilema entre \"civilización y barbarie\"." },
-      { id: 13, title: "Cien años de soledad", author: "Gabriel García Márquez", category: "Novela", year: 1967, pages: 471, code: "NOV-004", color: "olive", available: true,
-        desc: "La historia de la familia Buendía y del pueblo de Macondo, entre lo cotidiano y lo mágico." },
-      { id: 14, title: "Cuentos de amor, de locura y de muerte", author: "Horacio Quiroga", category: "Cuento", year: 1917, pages: 180, code: "CUE-002", color: "moss", available: true,
-        desc: "Relatos intensos donde la naturaleza, el amor y el peligro se mezclan. Quiroga, maestro del cuento latinoamericano." },
-      { id: 15, title: "El Aleph", author: "Jorge Luis Borges", category: "Cuento", year: 1949, pages: 190, code: "CUE-003", color: "rust", available: false,
-        desc: "Cuentos fantásticos y filosóficos, entre ellos el que da nombre al libro: un punto donde se ven todos los puntos del universo." },
-      { id: 16, title: "Breve historia del tiempo", author: "Stephen Hawking", category: "Ciencia", year: 1988, pages: 256, code: "CIE-002", color: "blue", available: true,
-        desc: "Una introducción para no especialistas al origen del universo, los agujeros negros y la naturaleza del tiempo." }
-    ];
-
-    /* ---------- Utilidades ---------- */
-    const norm = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    const $ = id => document.getElementById(id);
-    const state = { q: "", cat: "Todas", onlyAvail: false, sort: "title" };
-
-    const coverClass = c => ({ olive:"art-olive", coral:"art-coral", blue:"art-blue", yellow:"art-yellow", rust:"art-rust", ink:"art-ink", moss:"art-moss" }[c] || "art-olive");
-
-    function el(tag, cls, text) {
-      const n = document.createElement(tag);
-      if (cls) n.className = cls;
-      if (text !== undefined) n.textContent = text;
-      return n;
-    }
-
-    function buildCover(book, container) {
-      container.className = "book-art " + coverClass(book.color);
-      container.replaceChildren(
-        el("span", "", book.code),
-        el("b", "", book.title),
-        el("i", "", book.author.toUpperCase())
-      );
-    }
-
-    /* ---------- Chips de categoría ---------- */
-    const categories = ["Todas", ...[...new Set(BOOKS.map(b => b.category))].sort((a, b) => a.localeCompare(b, "es"))];
-
-    function renderChips() {
-      $("chips").replaceChildren(...categories.map(cat => {
-        const count = cat === "Todas" ? BOOKS.length : BOOKS.filter(b => b.category === cat).length;
-        const btn = el("button", "chip", cat);
-        btn.type = "button";
-        btn.setAttribute("aria-pressed", String(state.cat === cat));
-        btn.append(el("small", "", count));
-        btn.addEventListener("click", () => { state.cat = cat; update(); });
-        return btn;
-      }));
-    }
-
-    /* ---------- Filtrado y orden ---------- */
-    function getResults() {
-      const q = norm(state.q.trim());
-      let list = BOOKS.filter(b => {
-        if (state.cat !== "Todas" && b.category !== state.cat) return false;
-        if (state.onlyAvail && !b.available) return false;
-        if (!q) return true;
-        return norm(`${b.title} ${b.author} ${b.category} ${b.desc}`).includes(q);
-      });
-      const by = {
-        "title":     (a, b) => a.title.localeCompare(b.title, "es"),
-        "author":    (a, b) => a.author.localeCompare(b.author, "es"),
-        "year-asc":  (a, b) => a.year - b.year,
-        "year-desc": (a, b) => b.year - a.year
-      }[state.sort];
-      return list.sort(by);
-    }
-
-    /* ---------- Render de tarjetas ---------- */
-    function renderGrid(list) {
-      $("grid").replaceChildren(...list.map(book => {
-        const li = el("li");
-        const btn = el("button", "book-card" + (book.available ? "" : " is-out"));
-        btn.type = "button";
-        btn.setAttribute("aria-label", `${book.title}, de ${book.author}. ${book.available ? "Disponible" : "Prestado"}. Ver ficha.`);
-
-        const cover = el("div");
-        cover.setAttribute("aria-hidden", "true");
-        buildCover(book, cover);
-
-        const meta = el("div", "card-meta");
-        meta.append(
-          el("p", "book-category", book.category),
-          el("span", "status " + (book.available ? "status-ok" : "status-out"), book.available ? "Disponible" : "Prestado")
-        );
-
-        btn.append(cover, meta, el("h3", "", book.title), el("p", "book-byline", book.author));
-        btn.addEventListener("click", () => openModal(book));
-        li.append(btn);
-        return li;
-      }));
-    }
-
-    function update() {
-      const list = getResults();
-      renderChips();
-      renderGrid(list);
-
-      const total = BOOKS.length;
-      $("results-title").replaceChildren(
-        "Mostrando ", el("strong", "", list.length), ` de ${total} libros`
-      );
-      $("empty").hidden = list.length > 0;
-      $("grid").hidden = list.length === 0;
-
-      const filtered = state.q || state.cat !== "Todas" || state.onlyAvail;
-      $("resetBtn").hidden = !filtered;
-      $("searchBox").classList.toggle("has-value", !!state.q);
-    }
-
-    function resetAll() {
-      state.q = ""; state.cat = "Todas"; state.onlyAvail = false;
-      $("search").value = ""; $("onlyAvailable").checked = false;
-      update();
-    }
-
-    /* ---------- Ficha (modal) ---------- */
-    const modal = $("modal");
-    let lastFocus = null;
-
-    function openModal(book) {
-      lastFocus = document.activeElement;
-      buildCover(book, $("m-cover"));
-      $("m-category").textContent = book.category;
-      $("m-title").textContent = book.title;
-      $("m-author").textContent = "por " + book.author;
-      $("m-desc").textContent = book.desc;
-      $("m-code").textContent = book.code;
-      $("m-year").textContent = book.year;
-      $("m-pages").textContent = book.pages;
-      const st = $("m-status");
-      st.className = "status " + (book.available ? "status-ok" : "status-out");
-      st.textContent = book.available ? "Disponible" : "Prestado";
-      modal.showModal();
-    }
-
-    $("modalClose").addEventListener("click", () => modal.close());
-    modal.addEventListener("click", e => { if (e.target === modal) modal.close(); });
-    modal.addEventListener("close", () => lastFocus && lastFocus.focus());
-
-    /* ---------- Eventos ---------- */
-    $("search").addEventListener("input", e => { state.q = e.target.value; update(); });
-    $("searchClear").addEventListener("click", () => { state.q = ""; $("search").value = ""; update(); $("search").focus(); });
-    $("onlyAvailable").addEventListener("change", e => { state.onlyAvail = e.target.checked; update(); });
-    $("sort").addEventListener("change", e => { state.sort = e.target.value; update(); });
-    $("resetBtn").addEventListener("click", resetAll);
-    $("emptyReset").addEventListener("click", resetAll);
-
-    update();
-  </script>
 </body>
 </html>
