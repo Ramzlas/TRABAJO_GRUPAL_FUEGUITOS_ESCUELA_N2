@@ -1,30 +1,43 @@
-# Biblioteca Virtual Fueguitos
+## 📅 Lunes 19/10/2026 — Planificación
 
-Sitio web para mostrar los libros de la biblioteca al público, sirve como almacén digital de todo el material de la biblioteca. Se puede ver qué libros hay, cuáles están disponibles y acercarse a leerlos.
+**🎯 Objetivo del día:** [qué se busca lograr hoy]
 
-## Páginas
+**Tareas:**
+- [x] Iniciar el archivo tipo Scrum
+- [x] Establecer los grupos de código y metodología
+- [ ] [tarea]
 
-| Archivo | Qué tiene |
-|---|---|
-| `index.html` | Presentación del proyecto, quiénes somos y libros destacados |
-| `catalogo.html` | Todos los libros disponibles |
-| `login.html` | Login, registro y recuperación de contraseña |
-| `contactos.html` | Formas de contacto y la opción "deja o lleva" |
-| Donar y reservar | Sección para donar libros o reservar uno |
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
 
-## Tecnologías
+---
 
-- HTML y CSS
+## 📅 Miércoles 21/10/2026 — Control de avance
 
-## Equipo
+**🎯 Objetivo del día:** [ ]
 
-| Integrante | Área |
-|---|---|
-| Joaquín Cáceres | Documentación y Frontend |
-| Thomas Dimare | Documentación y Frontend |
-| Lautaro Espinillo | Frontend y Documentación |
-| Santiago Ochoa | Frontend y Backend |
-| Thiago Coronel | — |
-| Juan Ortiz | — |
+**Tareas:**
+- [ ] [tarea]
+- [ ] [tarea]
+- [ ] [tarea]
 
-## 📝 Documentación
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
+
+---
+
+## 📅 Viernes 23/10/2026 — Review y cierre
+
+**🎯 Objetivo del día:** [ ]
+
+**Tareas:**
+- [ ] [tarea]
+- [ ] [tarea]
+- [ ] [tarea]
+
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
+
+---
+
+## 🏁 Cierre del Sprint N001
