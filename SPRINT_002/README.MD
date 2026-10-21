@@ -1,19 +1,46 @@
-## Sprint N002
+## 📅 Lunes 19/10/2026 — Planificación
 
-**Semana:** [12/10/2026] al [16/10/2026]
-**Objetivo:** [TERMINAR ESQUEMA BÁSICO DE PAGINA WEB ESTÁTICA]
+**🎯 Objetivo del día:** [qué se busca lograr hoy]
 
-### Tareas del sprint
+**Tareas:**
+- [x] Iniciar el archivo tipo Scrum
+- [x] Establecer los grupos de código y metodología
+- [ ] [tarea]
 
-- [x] [Tener el INDEX.html] 
-- [ ] [Estandarizar la documentación] 
-- [ ] [Definir los roles y áreas de trabajo más optimas] 
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
 
-### Lunes [12/10/2026]
+---
 
-FERIADO
+## 📅 Miércoles 21/10/2026 — Control de avance
 
-### Miércoles [14/10/2026] 
+**🎯 Objetivo del día:** [ ]
+
+**Tareas:**
+- [ ] [tarea]
+- [ ] [tarea]
+- [ ] [tarea]
+
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
+
+---
+
+## 📅 Viernes 23/10/2026 — Review y cierre
+
+**🎯 Objetivo del día:** [ ]
+
+**Tareas:**
+- [ ] [tarea]
+- [ ] [tarea]
+- [ ] [tarea]
+
+**Bloqueos:** [ninguno]
+**Notas:** [ ]
+
+---
+
+## 🏁 Cierre del Sprint N002
 
 - [x] [Tener el INDEX.html]
 - [x] [Repasar la documentación]
