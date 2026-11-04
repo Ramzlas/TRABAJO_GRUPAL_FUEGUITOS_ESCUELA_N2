@@ -1,4 +1,4 @@
-# 8. Sprint 2
+Sprint 2
 
 ## Datos del sprint
 
