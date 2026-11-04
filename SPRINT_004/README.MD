@@ -1,4 +1,4 @@
-# 10. Sprint 4
+# Sprint 4
 
 ## Datos del sprint
 
